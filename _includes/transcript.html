@@ -1,0 +1,18 @@
+<script>
+    function toggleTranscript() {
+        var x = document.getElementById("transcript");
+        if (x.style.visibility != "hidden") {
+            x.style.visibility = "hidden";
+        } else {
+            x.style.visibility = "";
+        }
+    } 
+</script>
+
+<button onclick="toggleTranscript()">Click here to see the transcript</button>
+
+<div
+    id="transcript"
+    style="visibility: hidden;">
+    This is the transcript here
+</div>
