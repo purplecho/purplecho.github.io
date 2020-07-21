@@ -10,7 +10,7 @@ permalink: /hirustyquill/
 
 Edited by PurpleCho. Transcript of the audio below if needed.
 
-The following people, among others, contributed to this audio:
+The following people contributed to this audio:
 - Cole
 - Kas/steamingcup
 - alex
@@ -22,6 +22,11 @@ The following people, among others, contributed to this audio:
 - PhoenixFlame
 - Nowl
 - Berry
+- Shiv
+- Alice Shelley Forbes (@rebelgender)
+- Tiffany/PurpleAlmonds
+- Kath
+- warrigan
 - PurpleCho
 
 <script>
