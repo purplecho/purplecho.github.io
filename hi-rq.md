@@ -14,7 +14,7 @@ The following people contributed to this audio:
 - Cole
 - Kas/steamingcup
 - alex
-- Rach/rachelisce
+- Rach (@rachelisce)
 - Syd
 - Queenie (@queeniethequeer)
 - faye
