@@ -1,0 +1,66 @@
+---
+title: Hi Rusty Quill!
+layout: basics
+permalink: /hirustyquill/
+customcss: hello
+customjs: /assets/toggle.js
+---
+<div class="wrapper">
+    <header>
+        <img src="/assets/banner.png" alt="Hi Rusty Quill... everyone here!">
+    </header>
+
+    <main class="page-content" aria-label="Content">
+        <audio
+            controls
+            src="/assets/hi-rq.mp3">Whoops, your browser cannot load the audio for some reason!
+        </audio>
+
+        <section>
+            <div class="section-title">
+                <h1 id="credits">CREDITS</h1>
+                <button aria-labelledby="credits" id="credit-button" onclick="toggle('credit-button','credits-text')">Click to hide &lt;&lt;</button>
+            </div>
+            <div class="collapsible" id="credits-text">
+                <h2>AUDIO EDITING BY</h2>
+                <p>Holly/PurpleCho</p>
+                <h2>AUDIO RECORDINGS BY</h2>
+                <div class="columns">
+                    <ul>
+                        <li>Cole</li>
+                        <li>Kas/steamingcup</li>
+                        <li>alex</li>
+                        <li>Rach (@rachelisce)</li>
+                        <li>Syd</li>
+                        <li>Queenie (@queeniethequeer)</li>
+                        <li>faye</li>
+                        <li>bittercape</li>
+                        <li>PhoenixFlame</li>
+                        <li>Nowl</li>
+                        <li>Berry</li>
+                        <li>Shiv</li>
+                        <li>Alice Shelley Forbes (@rebelgender)</li>
+                        <li>Tiffany/PurpleAlmonds</li>
+                        <li>Kath</li>
+                        <li>warrigan</li>
+                        <li>PurpleCho</li>
+                    </ul>
+                </div>
+                <h2>HAND LETTERING BY</h2>
+                <p>Tiffany/PurpleAlmonds</p>
+            </div>
+        </section>
+        <section>
+            <div class="section-title">
+                <h1 id="transcript">TRANSCRIPT</h1>
+                <button aria-labelledby="transcript" id= "ts-button" onclick="toggle('ts-button','transcript-text')">Click to show >></button>
+            </div>
+
+            <div
+                id="transcript-text" class="collapsible" style="display: none;">
+                <p>Hi Rusty Quill, everyone here.</p>
+                <p>Hello Rusty Quill, apologies for the deception but we wanted to make sure you started listening, so we thought it best not to announce ourselves. We're assuming you're alone, you always did prefer to look at fan submissions in private. I wouldn't try too hard to stop listening, there's every likelihood that you'll miss out on the thanks and praise you'll get. So just listen. Thank you for providing moments of terror and wonder through your podcasts. Now, shall we tell you how great you are again?</p>
+            </div>
+        </section>
+    </main>
+</div>

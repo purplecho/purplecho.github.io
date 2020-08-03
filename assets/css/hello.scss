@@ -1,0 +1,102 @@
+---
+---
+
+$background: #eaddd3;
+$dark: #473524;
+$light: #755a3f;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+body {
+    background-color: $background;
+    background-image: url("/assets/background.png");
+    background-position: bottom left;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    color: $dark;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 24pt;
+    // float: left;
+    // clear: both;
+}
+
+h2 {
+    color: $light;
+    font-weight: 400;
+    font-size: 14pt;
+}
+
+.collapsible {
+    clear: both;
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px;
+}
+
+button {
+    color: $background;
+    background-color: $light;
+    font: inherit;
+    border: none;
+    border-radius: 2em;
+    padding: 0.5em 3em;
+
+    &:hover, &:focus {
+        background-color:$dark;
+    }
+    &:active {
+        background-color: darken($dark, 30%);
+    }
+}
+
+audio {
+    width: 100%;
+    border-radius: 2em;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+
+    li::before {
+        content: "\200B";
+    }
+}
+
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    > * {
+        display: inline;
+        vertical-align: middle;
+        margin-right: 30px;
+    }
+}
+
+.wrapper {
+    padding-top: 20px;
+}
+
+.columns {
+    column-count: 3;
+    column-width: 200px;
+    margin-bottom: 15px;
+}
+
+header {
+    width: 100%;
+}
+
+img {
+    max-height: 50vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
