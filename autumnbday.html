@@ -17,10 +17,8 @@ customjs: /assets/toggle.js
         <section>
         {%if contributor.title%}
             <h2>{{contributor.title}}</h2>
-            <p>by {{contributor.name}}</p>
-        {%else%}
-            <p>From {{contributor.name}}</p>
         {%endif%}
+            <p>From {{contributor.name}}, {{contributor.social}}</p>
             {%for img in contributor.image%}
             <img src="/assets/birthday/{{img.url}}" alt={{img.alt}}>
             {%endfor%}
@@ -34,7 +32,6 @@ customjs: /assets/toggle.js
             </p>
             <div id="{{contributor.name}}-text" style="display:none">{{contributor.text}}</div>
             {%endif%}
-            <p>{{contributor.social}}</p>
         </section>
     {%endfor%}
     </main>
