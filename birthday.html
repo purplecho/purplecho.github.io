@@ -1,0 +1,28 @@
+---
+title: Happy Birthday Autumn!
+layout: basics
+customcss: autumn
+customjs: /assets/toggle.js
+---
+
+<div class="wrapper">
+    <header>
+        <h1>HAPPY BIRTHDAY AUTUMN!</h1>
+        <h2>We think you're pretty cool, so we made things for you!</h2>
+    </header>
+
+    <main>
+        <div id="text">
+            <p>Click a person's name to see what they made!</p>
+            <ul>
+            {% for person in site.birthday %}
+                <li>
+                    <a href="{{ person.url }}">
+                    {{ person.name }}
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </main>
+</div>

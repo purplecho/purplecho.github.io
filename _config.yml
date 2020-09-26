@@ -33,6 +33,25 @@ theme: minima
 plugins:
   - jekyll-feed
 
+#Collections
+collections:
+  birthday:
+    output: true
+
+
+#Front matter defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "birthday" # a collection in your site, in plural form
+    values:
+      layout: "birthday"
+      title: Happy Birthday Autumn!
+      hastext: false
+      customcss: autumn
+      customjs: /assets/toggle.js
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

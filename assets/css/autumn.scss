@@ -1,11 +1,101 @@
 ---
 ---
+$black: #2C1011;
+$red: #AA1E24;
+$beige: #FFE0A5;
+$eggshell: #FFF2D9;
+$white: #FFFFFF;
+$background: rgb(209, 96, 4);
 
-.columns {
-    column-count: 2;
-    column-width: 300px;
+$extra-bold: 800;
+$bold: 700;
+$semi-bold: 600;
+$regular: 400;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap');
+
+body {
+    background-color: $background;
+    background-image: url("/assets/birthday/leaves.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: $semi-bold;
+    font-size: 12pt;
+    color: $beige;
 }
 
 header {
     text-align: center;
+    color: $white;
+    margin-top: 10px;
+}
+
+h1 {
+    font-weight: $extra-bold;
+    font-size: 36pt;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+h2 {
+    font-weight: $bold;
+    font-size: 18pt;
+}
+
+main {
+    background-color: $black;
+    img {
+        max-height: 80vh;
+        display: block;
+        margin: auto;
+    }
+    #text {
+        padding: 10px;
+        min-height: 100px;
+        margin-bottom: 20px;
+        a {
+            color: $red;
+        }
+    }
+}
+
+h3 {
+    font-weight: $bold;
+    font-size: 16pt;
+    color: $eggshell;
+}
+
+#credits {
+    color: $eggshell;
+    font-weight: $semi-bold;
+    font-style: italic;
+}
+
+nav {
+    text-align: center;
+    color: $white;
+    a{
+        font-size: 24pt;
+        background-color: $black;
+        border: 3px solid $red;
+        padding: 5px 20px;
+        margin: 0 10px;
+    }
+    a:hover {
+        background-color: scale-color($black, $lightness: 15%, $saturation: 50%);
+        text-decoration: none;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+}
+
+
+a, a:visited, a:hover {
+    color: inherit;
 }

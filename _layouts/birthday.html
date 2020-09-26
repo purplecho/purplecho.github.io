@@ -1,0 +1,43 @@
+---
+title: Happy Birthday Autumn!
+layout: basics
+customcss: autumn
+customjs: /assets/toggle.js
+---
+<div class="wrapper">
+    <header>
+        <h1><a href="/birthday">HAPPY BIRTHDAY AUTUMN!</a></h1>
+        <h2>We think you're pretty cool, so we made things for you!</h2>
+    </header>
+
+    <main>
+    {%for img in page.image%}
+        <img src="/assets/birthday/{{img.url}}" alt={{img.alt}}>
+    {%endfor%}
+        <section id="text">
+        {%if page.arttitle%}
+            <h3>{{page.arttitle}}</h3>
+        {%endif%}
+            <p id="credits">From {{page.name}}{%if page.social%}, {{page.social}}{%endif%}</p>
+        {%if page.hastext%}
+            <div id="message">{{page.content | markdownify}}</div>
+        {%endif%}
+        </section>
+    </main>
+    <nav>
+        {%if page.previous%}
+        <a href={{page.previous.url}}>&lt; Back</a>
+        {%endif%}
+        {%if page.next%}
+        <a href={{page.next.url}}>Next &gt;</a>
+        {%endif%}
+        {%assign total = site.birthday | size | minus: 1%}
+        {%for i in (0..total)%}
+            {%if site.birthday[i].url == page.url%}
+                {%assign pagenum = i | plus: 1%}
+                {% break %}
+            {%endif%}
+        {%endfor%}
+        <p>Page {{pagenum}} of {{total | plus: 1}}</p>
+    </nav>
+</div>
