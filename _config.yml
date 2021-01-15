@@ -37,6 +37,8 @@ plugins:
 collections:
   birthday:
     output: true
+  archives:
+    output: true
 
 
 #Front matter defaults

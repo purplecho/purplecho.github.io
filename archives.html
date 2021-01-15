@@ -1,0 +1,28 @@
+---
+title: A Magnus Archives art project
+layout: basics
+#customcss: autumn
+#customjs: /assets/toggle.js
+---
+
+<div class="wrapper">
+    <header>
+        <h1>The Magnus Archives is a <s>podcast</s> Post-It</h1>
+        <h2>200 episodes in sticky-note form</h2>
+    </header>
+
+    <main>
+        <div id="text">
+            <p>Click an image to see a larger version plus artist credits</p>
+            {% for pic in site.archives %}
+            <a href="{{ pic.url }}">
+            {% if pic.imglink != null %}
+                <img src="{{pic.imglink}}" alt="{{pic.alt}}">
+            {% else %}
+                <img src="/assets/placeholder.png" alt="Placeholder image for episode {{pic.ep}}">
+            {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+    </main>
+</div>
