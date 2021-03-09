@@ -1,7 +1,7 @@
 ---
 title: A Magnus Archives art project
 layout: basics
-#customcss: autumn
+customcss: archives
 #customjs: /assets/toggle.js
 ---
 
@@ -11,18 +11,29 @@ layout: basics
         <h2>200 episodes in sticky-note form</h2>
     </header>
 
-    <main>
-        <div id="text">
-            <p>Click an image to see a larger version plus artist credits</p>
-            {% for pic in site.archives %}
-            <a href="{{ pic.url }}">
-            {% if pic.imglink != null %}
-                <img src="{{pic.imglink}}" alt="{{pic.alt}}">
-            {% else %}
-                <img src="/assets/placeholder.png" alt="Placeholder image for episode {{pic.ep}}">
-            {% endif %}
-            </a>
-            {% endfor %}
+    <main id="grid">
+        <div>
+            <div id="intro">
+                <p>
+                    The Magnus Archives has 200 stunning episodes, and we are immensely proud to present you <i>200 pieces of post-it note art</i> in tribute to the thing that brought us all together. 
+                    We couldn’t have done it without each other, and we couldn’t have done it without you.
+                </p>
+                <p>Click an image to see a larger version plus artist credits. <a href="credits.html">View full list of credits.</a></p>
+            </div>
+            {%- for i in (0..199) -%}
+                {%- if site.archives[i] != null-%}
+                    {%- assign pic = site.archives[i] -%}
+                    <a href="{{ pic.url }}">
+                    {%- if pic.thumbnail != null -%}
+                        <img src="{{pic.thumbnail}}" alt="{{pic.alt}}">
+                    {%- else -%}
+                        <img src="/assets/placeholder1.png" alt="Placeholder image for episode {{pic.ep}}">
+                    {%- endif -%}
+                    </a>
+                {%- else -%}
+                    <img src="/assets/placeholder1.png" alt="Placeholder image for episode {{i}}" title={{i | plus: 1 }}>
+                {%- endif -%}
+            {%- endfor -%}
         </div>
     </main>
 </div>

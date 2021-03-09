@@ -1,0 +1,44 @@
+---
+title: A Magnus Archives art project
+layout: basics
+customcss: archives
+permalink: archives/credits.html
+#customjs: /assets/toggle.js
+---
+
+<div class="wrapper">
+    <header>
+        <a href="/archives"><h1>The Magnus Archives is a <s>podcast</s> Post-It</h1></a>
+        <h2>200 episodes in sticky-note form</h2>
+    </header>
+
+    <main>
+        <div>
+            <div id="intro">
+                <p>
+                    Thank you to all of our incredible participants for making this project such a joy to work on, and such a gorgeous finished product to behold.
+                </p>
+                <p>Special thanks go to: Iso for their irreplaceable spreadsheet wizardry, Lowell for their gorgeous photo editing to make our parts into a whole, purplecho for building this fantastic website to bring it all together, and serhawke for wrangling 59 people as project lead.</p>
+            </div>
+            <table>
+                <tr>
+                    <th>Artist</th>
+                    <th>Episodes</th>
+                </tr>
+                {%- assign people = site.archives-artists | sort_natural: 'credit' -%}
+                {%- for artist in people -%}
+                <tr>
+                    <td>{{artist.credit}}{%- if artist.handle -%}, <a href="{{artist.link}}">{{artist.handle}}</a>{%-endif-%}
+                    </td>
+                    <td>
+                        {%- for ep in artist.episodes -%}
+                        <a href="/archives/{{ep}}.html">{{ep}}</a>
+                        {%-if forloop.last -%}{%else%}, {%endif%}
+                        {%- endfor -%}
+                    </td>
+                </tr>
+                {%- endfor -%}
+            </table>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,40 @@
+---
+title: The Magnus Archives is a Post-It
+layout: basics
+---
+<div class="wrapper">
+    <header>
+        <h1><a href="/archives">The Magnus Archives is a <s>podcast</s> Post-It</a></h1>
+        <h2>200 episodes in sticky-note form</h2>
+    </header>
+
+    <main id="episode">
+        <img src={{page.imglink}} alt="{{page.alt}}" id="fullsize">
+        <section id="text">
+            <h3>MAG {{page.ep}} - {{page.title}}</h3>
+            <p id="credits">
+                {% assign artist = site.archives-artists | where: 'ref', page.name | first %}
+                From {{artist.credit}}{%if artist.handle%}, <a href="{{artist.link}}">{{artist.handle}}</a>{%endif%}
+            </p>
+        {%if page.hastext%}
+            <div id="message">{{page.content | markdownify}}</div>
+        {%endif%}
+        </section>
+    </main>
+    <nav>
+        {%if page.previous%}
+        <a href={{page.previous.url}}>&lt; MAG {{page.previous.ep}} - {{page.previous.title}}</a>
+        {%endif%}
+        {%if page.next%}
+        <a href={{page.next.url}}>MAG {{page.next.ep}} - {{page.next.title}} &gt;</a>
+        {%endif%}
+        {%assign total = site.archives | size | minus: 1%}
+        {%for i in (0..total)%}
+            {%if site.archives[i].url == page.url%}
+                {%assign pagenum = i | plus: 1%}
+                {% break %}
+            {%endif%}
+        {%endfor%}
+        <p>Page {{pagenum}} of {{total | plus: 1}}</p>
+    </nav>
+</div>

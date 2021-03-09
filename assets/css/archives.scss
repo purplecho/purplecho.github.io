@@ -1,0 +1,91 @@
+---
+---
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body {
+    text-align: center;
+    background: url("/assets/archives/1.jpeg") fixed;
+    color: white;
+}
+a, a:visited, a:hover {
+    color: green;
+}
+
+h1, h2 {
+    font-family: 'Cabin', sans-serif;
+    color: green;
+    s {
+        text-decoration-thickness: 0.2em;
+    }
+}
+
+p:last-child { padding-bottom: 0;}
+
+#grid div img {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+}
+
+#episode, #intro {
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#text {
+    text-align: left;
+}
+
+#fullsize {
+    max-height: 80vh;
+    text-align: center;
+}
+
+table {
+    background: rgba(0,0,0,0.5);;
+    color: inherit;
+    border: none;
+    border-radius: 5px;
+    td, th, tr {
+        background: inherit;
+        color: inherit;
+        border: inherit;
+    }
+    th {
+        text-align: center;
+    }
+    tr {
+        border-bottom: 3px black solid;
+    }
+    tr:nth-child(2n) {
+        background: inherit;
+    }
+    tr:last-child {
+        border-bottom: inherit;
+    }
+    td:nth-child(2) {
+        text-align: right;
+    }
+}
+
+nav {
+    text-align: center;
+    color: green;
+    a{
+        font-size: 12pt;
+        background: rgba(0,0,0,0.5);
+        padding: 5px 20px;
+        margin: 0 10px;
+        border-radius: 5px;;
+    }
+    a:hover {
+        background-color: scale-color(black, $lightness: 15%);
+        text-decoration: none;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+}

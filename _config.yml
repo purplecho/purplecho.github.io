@@ -39,6 +39,8 @@ collections:
     output: true
   archives:
     output: true
+  archives-artists:
+    sort_by: credit
 
 
 #Front matter defaults
@@ -53,6 +55,17 @@ defaults:
       hastext: false
       customcss: autumn
       customjs: /assets/toggle.js
+  -
+    scope:
+      path: ""
+      type: "archives" # a collection in your site, in plural form
+    values:
+      layout: "tma"
+      hastext: false
+      customcss: archives
+      customjs: /assets/toggle.js
+      imglink: /assets/placeholder.png
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
