@@ -25,7 +25,7 @@ customcss: archives
                     {%- assign pic = site.archives[i] -%}
                     <a href="{{ pic.url }}">
                     {%- if pic.thumbnail != null -%}
-                        <img src="{{pic.thumbnail}}" alt="{{pic.alt}}">
+                        <img src="{{pic.thumbnail}}" alt="MAG {{pic.ep}} - {{pic.title}}">
                     {%- else -%}
                         <img src="/assets/placeholder1.png" alt="Placeholder image for episode {{pic.ep}}">
                     {%- endif -%}
