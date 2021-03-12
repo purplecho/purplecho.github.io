@@ -2,7 +2,7 @@
 ref: J.J. Hunter
 credit: J.J. Hunter
 handle: "jjhunter.dreamwidth.org/"
-link: ""
+link: "https://jjhunter.dreamwidth.org/"
 episodes:
     - "079"
     - "110"
