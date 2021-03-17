@@ -31,8 +31,11 @@ permalink: archives/credits.html
                     <td>{{artist.credit}}{%- if artist.handle -%}, <a href="{{artist.link}}">{{artist.handle}}</a>{%-endif-%}
                     </td>
                     <td>
-                        {%- for ep in artist.episodes -%}
+                        {%- for ep in artist.episodes -%}{%-if artist.ref != "Salts&"-%}
                         <a href="/archives/{{ep}}.html">{{ep}}</a>
+                        {%-else-%}
+                        <a href="/archives/{{ep.num}}.html">{{ep.num}}</a> ({{ep.by}})
+                        {%-endif-%}
                         {%-if forloop.last -%}{%else%}, {%endif%}
                         {%- endfor -%}
                     </td>

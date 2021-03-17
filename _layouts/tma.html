@@ -14,7 +14,7 @@ layout: basics
             <h3>MAG {{page.ep}} - {{page.title}}</h3>
             <p id="credits">
                 {% assign artist = site.archives-artists | where: 'ref', page.name | first %}
-                From {{artist.credit}}{%if artist.handle%}, <a href="{{artist.link}}">{{artist.handle}}</a>{%endif%}
+                From {{artist.credit}}{%if artist.ref == "Salts&"%} {%assign episode = artist.episodes | where: "int", page.ep | first%}({{episode.by}}){%endif%}{%if artist.handle%}, <a href="{{artist.link}}">{{artist.handle}}</a>{%endif%}
             </p>
         {%if page.hastext%}
             <div id="message">{{page.content | markdownify}}</div>
