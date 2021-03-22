@@ -2,7 +2,7 @@
 ref: faye
 credit: Faye
 episodes:
-    - "018"
+    - "028"
     - "036"
     - "068"
     - "098"
