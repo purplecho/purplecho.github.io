@@ -20,7 +20,7 @@ customcss: archives
                 <p>Click an image to see a larger version plus artist credits. <a href="archives/credits.html">View full list of credits.</a></p>
             </div>
             {%- for i in (0..199) -%}
-                {%- if site.archives[i] != null-%}
+            <div class="thumb">
                     {%- assign pic = site.archives[i] -%}
                     <a href="{{ pic.url }}">
                     {%- if pic.thumbnail != null -%}
@@ -28,10 +28,9 @@ customcss: archives
                     {%- else -%}
                         <img src="/assets/placeholder1.png" alt="Placeholder image for episode {{pic.ep}}">
                     {%- endif -%}
+                        <div class="overlay"><div class="text">MAG {{pic.ep}}<br/>{{pic.title}}</div></div>
                     </a>
-                {%- else -%}
-                    <img src="/assets/placeholder1.png" alt="Placeholder image for episode {{i}}" title={{i | plus: 1 }}>
-                {%- endif -%}
+            </div>
             {%- endfor -%}
         </div>
     </main>
