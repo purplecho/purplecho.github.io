@@ -210,16 +210,16 @@ This should still be completely compatible with a vanilla client, but if you wan
   - in-game-usernames
  
 # Upcoming channel list
- - GENERAL
+- GENERAL
   - welcome-guide (including roles)
   - announcements
   - gen-chat
   - in-game-usernames
   - update-planning (threads for various things)
- - COLLABS
+- COLLABS
   - resource-trading
   - community-projects (use threads)
- - ARCHIVED
+- ARCHIVED
   - all old channels
   
 
